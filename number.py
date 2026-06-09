@@ -1,13 +1,18 @@
 from homeassistant.components.number import NumberEntity
 
+DOMAIN = "smart_irrigation_simple"
+
 class IrrigationDuration(NumberEntity):
-    _attr_native_min_value = 5
-    _attr_native_max_value = 180
-    _attr_native_step = 1
+
+    _attr_min_value = 5
+    _attr_max_value = 180
+    _attr_step = 1
     _attr_native_unit_of_measurement = "s"
 
-    def __init__(self, name):
-        self._attr_name = f"{name} durée"
+    def __init__(self, hass, pump_id):
+        self.hass = hass
+        self.pump_id = pump_id
+        self._attr_name = f"Pompe {pump_id} durée"
         self._value = 30
 
     @property
