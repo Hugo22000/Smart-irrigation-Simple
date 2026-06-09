@@ -1,2 +1,17 @@
 # Smart-irrigation-Simple
 Homeassistant integration
+
+
+Structure 
+
+custom_components/
+└── smart_irrigation_simple/
+    ├── __init__.py
+    ├── manifest.json
+    ├── config_flow.py
+    ├── number.py
+    ├── sensor.py
+    ├── button.py
+    ├── switch.py
+    ├── services.yaml
+    └── translations/
