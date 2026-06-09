@@ -1,1 +1,6 @@
+DOMAIN = "smart_irrigation_simple"
 
+MIN_DURATION = 5
+MAX_DURATION = 180
+
+DEFAULT_DURATION = 30
