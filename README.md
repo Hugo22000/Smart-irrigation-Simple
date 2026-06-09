@@ -14,5 +14,6 @@ custom_components/
     ├── sensor.py
     ├── button.py
     ├── switch.py
+    ├── coordinator.py
     ├── services.yaml
     └── translations/```
