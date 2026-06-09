@@ -4,6 +4,7 @@ Homeassistant integration
 
 Structure 
 
+```yaml
 custom_components/
 └── smart_irrigation_simple/
     ├── __init__.py
@@ -14,4 +15,4 @@ custom_components/
     ├── button.py
     ├── switch.py
     ├── services.yaml
-    └── translations/
+    └── translations/```
