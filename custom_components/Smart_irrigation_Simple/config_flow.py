@@ -12,14 +12,15 @@ class IrrigationFlow(config_entries.ConfigFlow, domain=DOMAIN):
             return self.async_create_entry(title="Irrigation", data=user_input)
 
         schema = vol.Schema({
-            vol.Required("pump1_switch"): str,
-            vol.Required("pump1_flow"): int,
-
-            vol.Required("pump2_switch"): str,
-            vol.Required("pump2_flow"): int,
-
-            vol.Required("pump3_switch"): str,
-            vol.Required("pump3_flow"): int,
-        })
+    vol.Required("pump1_switch"): selector.EntitySelector(selector.EntitySelectorConfig(domain="switch")),
+    vol.Required("pump1_flow", default=120): selector.NumberSelector(selector.NumberSelectorConfig(
+            min=1,max=1000,step=1,unit_of_measurement="ml/min" )),
+    vol.Required("pump2_switch"): selector.EntitySelector(selector.EntitySelectorConfig( domain="switch" ) ),
+    vol.Required("pump2_flow", default=120): selector.NumberSelector(selector.NumberSelectorConfig(
+            min=1,  max=1000,  step=1, unit_of_measurement="ml/min"  )   ),
+    vol.Required("pump3_switch"): selector.EntitySelector( selector.EntitySelectorConfig(  domain="switch"    )   ),
+    vol.Required("pump3_flow", default=120): selector.NumberSelector(  selector.NumberSelectorConfig(
+           min=1,   max=1000,    step=1,    unit_of_measurement="ml/min"  )   ),
+})
 
         return self.async_show_form(step_id="user", data_schema=schema)
