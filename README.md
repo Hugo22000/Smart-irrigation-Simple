@@ -1,8 +1,22 @@
-# Smart-irrigation-Simple
+# Smart Irrigation Simple
 Homeassistant integration
 
+Integration Home Assistant pour gestion simplifiée d'arrosage :
 
-Structure 
+- 3 pompes
+- durée 5–180 secondes
+- calcul automatique du volume
+- arrosage manuel
+
+## Installation
+
+Via HACS → Custom repository
+
+## Configuration
+
+Ajoutez vos pompes et débits via l'interface Home Assistant.
+
+## Structure 
 
 ```yaml
 custom_components/
