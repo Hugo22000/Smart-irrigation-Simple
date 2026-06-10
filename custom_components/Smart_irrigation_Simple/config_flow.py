@@ -1,6 +1,7 @@
 import voluptuous as vol
 from homeassistant import config_entries
 from .const import DOMAIN
+from homeassistant.helpers import selector
 
 class IrrigationFlow(config_entries.ConfigFlow, domain=DOMAIN):
 
