@@ -35,4 +35,17 @@ custom_components/
     ├── switch.py
     ├── coordinator.py
     ├── services.yaml
-    └── translations/```
+    └── translations/
+```
+
+## Road Map
+
+- [ ] Mise en place back-end integration
+      - Création pompe et variable
+      - Création mode et automatisation
+      - Configuration intégration
+- [ ] Mise en place de l'opérateur
+      - Suivi pompe
+      - Dernière utilisation
+      - prochaine arrosage
+      - Mode arrosage ( auto / manuel / suivi)
