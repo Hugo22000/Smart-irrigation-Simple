@@ -1,4 +1,9 @@
 # Smart Irrigation Simple
+<p align="center">
+  <img src="Logo.png" width="200">
+</p>
+
+# Smart Irrigation Simple
 Homeassistant integration
 
 Integration Home Assistant pour gestion simplifiée d'arrosage :
